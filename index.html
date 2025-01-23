@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI & UX Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Header/Nav Bar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+
+    .contact-btn {
+      background-color: #f39c12;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .contact-btn:hover {
+      background-color: #d87b0e;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+      background-color: #f8f9fa;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    .hero-text p {
+      margin: 1rem 0;
+      color: #666;
+    }
+
+    .hero-text .buttons {
+      margin-top: 1rem;
+    }
+
+    .hero-text .buttons button {
+      padding: 0.7rem 1.5rem;
+      margin-right: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero-text .hire-btn {
+      background-color: #f39c12;
+      color: #fff;
+    }
+
+    .hero-text .hire-btn:hover {
+      background-color: #d87b0e;
+    }
+
+    .hero-text .cv-btn {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .hero-text .cv-btn:hover {
+      background-color: #555;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      max-width: 80%;
+      width: 290px;
+      border-radius:100px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* About Me Section */
+    .about {
+      padding: 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      margin: 1rem;
+      text-align: left;
+      max-width: 300px;
+    }
+
+    .skill h3 {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill .progress-bar {
+      width: 100%;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .skill .progress {
+      height: 10px;
+      background-color: #f39c12;
+    }
+
+    /* My Projects Section */
+    .projects {
+      padding: 2rem;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .projects p {
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .project img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project .project-info {
+      padding: 1rem;
+    }
+
+    .project .project-info h3 {
+      font-size: 1.25rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .project .project-info p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Brandy Mooney</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Projects</a></li>
+    </ul>
+  </nav>
+  <button class="contact-btn">Contact Me</button>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I am Brandy Mooney<br>Data Analytics, Engineering</h1>
+    <p>Lorem ipsum dolor sit amet consectetur. Creating seamless user experiences with style.</p>
+    <div class="buttons">
+      <button class="hire-btn">Hire Me</button>
+      <button class="cv-btn">Download CV</button>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="/images/headshot.jpg" alt="Brandy Mooney">
+  </div>
+</section>
+
+<section class="about">
+  <h2>About Me</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis volutpat eros.</p>
+  <div class="skills">
+    <div class="skill">
+      <h3>xxx</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 92%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>xxx</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 85%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>xxxx</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 90%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>xxx</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 80%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects">
+  <h2>My Projects</h2>
+  <p>Here are some of the projects I have worked on recently.</p>
+  <div class="project-grid">
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200" alt="Project 1">
+      <div class="project-info">
+        <h3>Project 1</h3>
+        <p>A brief description of the project goes here.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200" alt="Project 2">
+      <div class="project-info">
+        <h3>Project 2</h3>
+        <p>A brief description of the project goes here.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200" alt="Project 3">
+      <div class="project-info">
+        <h3>Project 3</h3>
+        <p>A brief description of the project goes here.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200" alt="Project 4">
+      <div class="project-info">
+        <h3>Project 4</h3>
+        <p>A brief description of the project goes here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
+
