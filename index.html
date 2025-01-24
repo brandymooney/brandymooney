@@ -3,9 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UI & UX Designer</title>
+  <title>Brandy Mooney</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+  
+</head>
+<body>
+
+<header>
+  <div class="logo">Brandy Mooney</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Projects</a></li>
+    </ul>
+  </nav>
+  <button class="contact-btn">Contact Me</button>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2 style="margin-bottom: 0.2rem;">Hi, I am<br> <span style="color: #f39c12;">Brandy Mooney</span></h2>
+    <h1 style="margin-top: 0;">Aspiring Data Analyst, Engineer</h1>
+    <p> I am a graduate student at the University of North Carolina Greensboro 
+      majoring in IT & Management with a concentration in Business Analytics. I enjoy utilizing creative skills
+      in collaboration with others.</p>
+    <div class="buttons">
+      <button class="hire-btn">Hire Me</button>
+      <button class="cv-btn">Download CV</button>
+    </div>
+  </div>
+  <div class="brandy-image">
+    <img src="/images/headshot.jpg" alt="Brandy Mooney">
+  </div>
+</section>
+
+<section class="about">
+  <h2>About Me</h2>
+  <p>I earned my undergraduate degree in Strategic Marketing where I first discovered marketing analytics
+     that then led me down my journey with data.  I always had an interest in technology, I first learned HTML coding when I was roughly 11 years old when 
+     I wanted to make my art page look "fancy" and different. In my free time I enjoy challenging myself by learning foreign languages such as Swedish and Japanese. 
+    </p>
+</section>
+
+<section class="certifications">
+  <h2>Certifications</h2>
+  <p>Here are some of the certifications I am currently working on</p>
+  <div class="certificate-grid">
+    
+    <div class="certificate">
+      <h3>Microsoft Power BI Data Analyst</h3>
+      <div class="skill">
+        <div class="progress-bar">
+          <div class="progress" style="width: 31%;"></div>
+        </div>
+      </div>
+      <p>Extract, Transform, Load (ETL) data to create dashboards. 
+        Develop skills in DAX, Power Query, data modeling.</p>
+    </div>
+
+    <div class="certificate">
+      <h3><a href="https://www.coursera.org/account/accomplishments/professional-cert/0CMSDV375TLT"target="_blank" style="text-decoration: none; color: inherit;">
+      Google Data Analytics
+      </a></h3>
+      <div class="skill">
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%;"></div>
+        </div>
+      </div>
+      <p>Clean, analyze, and visualize data using tools like SQL, R, and Tableau. 
+        Data analysis fundamentals. </p>
+    </div>
+
+    <div class="certificate">
+      <h3>IBM Data Engineering</h3>
+      <div class="skill">
+        <div class="progress-bar">
+          <div class="progress" style="width: 10%;"></div>
+        </div>
+      </div>
+      <p>Design, build, and manage data pipelines. Work with Python, 
+        SQL, Spark, and Hadoop. Develop ETL process skills.</p>
+    </div>
+
+    <div class="certificate">
+      <h3>Harvard CS50</h3>
+      <div class="skill">
+        <div class="progress-bar">
+          <div class="progress" style="width: 46.3%;"></div>
+        </div>
+      </div>
+      <p>Designing user-friendly applications with modern aesthetics.</p>
+    </div> 
+  </div>
+</section>
+
+<section class="projects">
+  <h2>My Projects</h2>
+  <p>Here are some of the projects I have worked on recently.</p>
+  <div class="project-grid">
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200" alt="Project 1">
+      <div class="project-info">
+        <h3>Predicting Flight Delays</h3>
+        <p>Utilized predicitive analytics (decision trees, model selection) to develop a model.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200" alt="Project 2">
+      <div class="project-info">
+        <h3>Application Development</h3>
+        <p>A brief description of the project goes here.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -118,13 +233,13 @@
       background-color: #555;
     }
 
-    .hero-image {
+    .brandy-image {
       flex: 1;
       display: flex;
       justify-content: center;
     }
 
-    .hero-image img {
+    .brandy-image img {
       max-width: 80%;
       width: 290px;
       border-radius:100px;
@@ -229,102 +344,62 @@
     .project .project-info p {
       color: #666;
     }
+
+    /* Certifications Section */
+    .certifications {
+      padding: 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .certifications h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .certifications p {
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .certificate {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .certificate:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .certificate img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .certificate h3 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .certificate p {
+      color: #666;
+      font-size: 0.9rem;
+    } 
   </style>
-</head>
-<body>
-
-<header>
-  <div class="logo">Brandy Moone</div>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Me</a></li>
-      <li><a href="#">Projects</a></li>
-    </ul>
-  </nav>
-  <button class="contact-btn">Contact Me</button>
-</header>
-
-<section class="hero">
-  <div class="hero-text">
-    <h1>Hi, I am Brandy Mooney<br>Data Analytics, Engineering</h1>
-    <p>Lorem ipsum dolor sit amet consectetur. Creating seamless user experiences with style.</p>
-    <div class="buttons">
-      <button class="hire-btn">Hire Me</button>
-      <button class="cv-btn">Download CV</button>
-    </div>
-  </div>
-  <div class="hero-image">
-    <img src="/images/headshot.jpg" alt="Brandy Mooney">
-  </div>
-</section>
-
-<section class="about">
-  <h2>About Me</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis volutpat eros.</p>
-  <div class="skills">
-    <div class="skill">
-      <h3>xxx</h3>
-      <div class="progress-bar">
-        <div class="progress" style="width: 92%;"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <h3>xxx</h3>
-      <div class="progress-bar">
-        <div class="progress" style="width: 85%;"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <h3>xxxx</h3>
-      <div class="progress-bar">
-        <div class="progress" style="width: 90%;"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <h3>xxx</h3>
-      <div class="progress-bar">
-        <div class="progress" style="width: 80%;"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="projects">
-  <h2>My Projects</h2>
-  <p>Here are some of the projects I have worked on recently.</p>
-  <div class="project-grid">
-    <div class="project">
-      <img src="https://via.placeholder.com/300x200" alt="Project 1">
-      <div class="project-info">
-        <h3>Project 1</h3>
-        <p>A brief description of the project goes here.</p>
-      </div>
-    </div>
-    <div class="project">
-      <img src="https://via.placeholder.com/300x200" alt="Project 2">
-      <div class="project-info">
-        <h3>Project 2</h3>
-        <p>A brief description of the project goes here.</p>
-      </div>
-    </div>
-    <div class="project">
-      <img src="https://via.placeholder.com/300x200" alt="Project 3">
-      <div class="project-info">
-        <h3>Project 3</h3>
-        <p>A brief description of the project goes here.</p>
-      </div>
-    </div>
-    <div class="project">
-      <img src="https://via.placeholder.com/300x200" alt="Project 4">
-      <div class="project-info">
-        <h3>Project 4</h3>
-        <p>A brief description of the project goes here.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 </body>
 </html>
 
