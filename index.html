@@ -108,34 +108,36 @@
       <div class="container_title">Predicting Flight Delays</div>
       <div class="container_description">Fall 2024</div>
       <div class="container_content">
-          <p>Utilized predictive analytics (decision trees, model selection) to develop a model.</p>
+          <span>
+            Utilized predictive analytics (decision trees, model selection) to develop a model.
+          </span>
       
           <div class="slideshow-container">
-              <img src="slide1.jpg" class="slide active">
-              <img src="slide1.jpg" class="slide">
-              <img src="slide1.jpg" class="slide">
+              <img src="/images/slide1.jpg" class="slide active">
+              <img src="/images/slide2.jpg" class="slide">
+              <img src="/images/slide3.jpg" class="slide">
               <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
               <button class="next" onclick="changeSlide(this, 1)">&#10095;</button>
           </div>
       </div>
   </div>
 
-        <div class="project-grid">
-           <div class="container_card" id="example_card">
-              <div class="container_title" id="example_title">
-                  <span>Application Development</span>
-              </div>
-              <div class="container_description">
-                  <span>Fall 2024</span>
-              </div>
-              <div class="container_content">
-                  <br>
-                  <div class="container_description">
-                      <span>
-                        Develop a dynamic web application using HTML, CSS, and JavaScript allowing users to analyze shopping trends and specific orders.
-                      </span>
-                  </div>
-              </div>
+  <div class="project-grid">
+    <div class="container_card" onclick="toggleDropdown(this)">
+      <div class="container_title">Web Application Development</div>
+      <div class="container_description">Fall 2024</div>
+      <div class="container_content">
+          <span>
+            Develop a dynamic web application using HTML, CSS, and JavaScript allowing users to analyze shopping trends and specific orders.
+          </span>
+
+          <div class="slideshow-container">
+              <img src="/images/image1.jpg" class="slide active">
+              <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
+              <button class="next" onclick="changeSlide(this, 1)">&#10095;</button>
+          </div>
+        </div>
+    </div>
           </div>
       </div>
   </div>
@@ -425,7 +427,7 @@
     :root {
     /* Light mode colors */
     --background-color: #f0f0f0;
-    --text-color: #000;
+    --text-color: #000000;
     --green : #58b884;
     --teal: #51b5b5;
     --blue: #7491ca;
@@ -435,8 +437,8 @@
     --light-pink: #cfb6be;
     --card-background: #f39c12; 
     --card-accent: #ffffff;
-    --card-text: #754a57;
-    --subtitle: #696969;
+    --card-text: #000000;
+    --subtitle: #000000;
     --light-accent: #fff9fb;
     --tag-text: #000;
 }
@@ -588,30 +590,6 @@ body {
     display: block;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
   </style>
 </body>
