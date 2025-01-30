@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brandy Mooney</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
+  <script src="container.js" defer></script>
 </head>
-<body>
 
+<body>
 <header>
   <div class="logo">Brandy Mooney</div>
   <nav>
@@ -20,6 +20,9 @@
   </nav>
   <button class="contact-btn">Contact Me</button>
 </header>
+</div>
+</body>
+</html>
 
 <section class="hero">
   <div class="hero-text">
@@ -29,7 +32,6 @@
       majoring in IT & Management with a concentration in Business Analytics. I enjoy utilizing creative skills
       in collaboration with others.</p>
     <div class="buttons">
-      <button class="hire-btn">Hire Me</button>
       <a href="https://brandymooney.github.io/Brandy_Mooney_Resume.pdf" target="_blank" style="text-decoration: none; color: inherit;"><button class="cv-btn"><h3>Download Resume</h3></button></a>
     </div>
   </div>
@@ -102,24 +104,40 @@
   <h2>My Projects</h2>
   <p>Here are some of the projects I have worked on recently.</p>
   <div class="project-grid">
-    <div class="project">
-      <img src="https://via.placeholder.com/300x200" alt="Project 1">
-      <div class="project-info">
-        <h3>Predicting Flight Delays</h3>
-        <p>Utilized predicitive analytics (decision trees, model selection) to develop a model.</p>
+    <div class="container_card" onclick="toggleDropdown(this)">
+      <div class="container_title">Predicting Flight Delays</div>
+      <div class="container_description">Fall 2024</div>
+      <div class="container_content">
+          <p>Utilized predictive analytics (decision trees, model selection) to develop a model.</p>
+      
+          <div class="slideshow-container">
+              <img src="slide1.jpg" class="slide active">
+              <img src="slide1.jpg" class="slide">
+              <img src="slide1.jpg" class="slide">
+              <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
+              <button class="next" onclick="changeSlide(this, 1)">&#10095;</button>
+          </div>
       </div>
-    </div>
+  </div>
 
-    <div class="project">
-      <img src="https://via.placeholder.com/300x200" alt="Project 2">
-      <div class="project-info">
-        <h3>Application Development</h3>
-        <p>Develop a dynamic web application using HTML, CSS, and JavaScript allowing
-          users to analyze shopping trends and specific orders.
-        </p>
+        <div class="project-grid">
+           <div class="container_card" id="example_card">
+              <div class="container_title" id="example_title">
+                  <span>Application Development</span>
+              </div>
+              <div class="container_description">
+                  <span>Fall 2024</span>
+              </div>
+              <div class="container_content">
+                  <br>
+                  <div class="container_description">
+                      <span>
+                        Develop a dynamic web application using HTML, CSS, and JavaScript allowing users to analyze shopping trends and specific orders.
+                      </span>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-
   </div>
 </section>
 <style>
@@ -315,7 +333,9 @@
     }
 
     .project-grid {
-      display: grid;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
@@ -401,6 +421,198 @@
       color: #666;
       font-size: 0.9rem;
     } 
+
+    :root {
+    /* Light mode colors */
+    --background-color: #f0f0f0;
+    --text-color: #000;
+    --green : #58b884;
+    --teal: #51b5b5;
+    --blue: #7491ca;
+    --purple: #b280c7;
+    --pink-shadow: #c4adb3;
+    --medium-pink: #d78ca0;
+    --light-pink: #cfb6be;
+    --card-background: #f39c12; 
+    --card-accent: #ffffff;
+    --card-text: #754a57;
+    --subtitle: #696969;
+    --light-accent: #fff9fb;
+    --tag-text: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: auto;
+}
+
+#header {
+    background: var(--background-color);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #b9a6a6;
+}
+
+#main {
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+}
+#container_header {
+    color:var(--text-color);
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 0px;
+    margin: auto;
+    width: fit-content;
+}
+
+#container_subtitle {
+    color: var(--subtitle);
+    font-size: 18px;
+    font-weight: lighter;
+    margin: auto;
+    width: fit-content;
+}
+
+#container_section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.container_image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.container_video {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.container_video video {
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+}
+
+.container_card {
+    background: var(--card-background);
+    border: 2px solid var(--card-accent);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.container_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--card-accent);
+    margin-bottom: 10px;
+}
+
+.container_description {
+    font-size: 16px;
+    color: var(--card-text);
+    line-height: 20px;
+    padding-right: 0.5rem;
+}
+
+.container_content {
+    max-height: 0;
+    opacity: 0;   
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.container_content.active {
+    max-height: 500px; 
+    opacity: 1;        
+}
+.container_card {
+    width: 300px;
+    background: var(--card-background);
+    border: 2px solid var(--card-accent);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container_content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.container_content.active {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height:200px; 
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
   </style>
 </body>
 </html>
